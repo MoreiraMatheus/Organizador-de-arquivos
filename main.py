@@ -7,7 +7,7 @@ def organize_files(directory):
     Audios_doc = os.path.join(directory, 'Audios')
     Photos_doc = os.path.join(directory, 'Fotos')
     Videos_doc = os.path.join(directory, 'Videos')
-    Documentos_doc = os.path.join(directory, 'Documentos')
+    Documents_doc = os.path.join(directory, 'Documentos')
     Others_doc = os.path.join(directory, 'Outros')
     Apps_doc = os.path.join(directory, 'Apps')
 
@@ -26,8 +26,8 @@ def organize_files(directory):
             os.mkdir(Photos_doc)
         if not os.path.isdir(Videos_doc):
             os.mkdir(Videos_doc)
-        if not os.path.isdir(Documentos_doc):
-            os.mkdir(Documentos_doc)
+        if not os.path.isdir(Documents_doc):
+            os.mkdir(Documents_doc)
         if not os.path.isdir(Apps_doc):
             os.mkdir(Apps_doc)
         if not os.path.isdir(Others_doc):
@@ -53,7 +53,7 @@ def organize_files(directory):
                     new_way = Videos_doc
                     print(f'O arquivo {file} foi movido para a pasta: Videos')
                 elif ext in Documents_ext:
-                    new_way = Documentos_doc
+                    new_way = Documents_doc
                     print(f'O arquivo {file} foi movido para a pasta: Docs')
                 elif ext in Apps_ext:
                     new_way = Apps_doc

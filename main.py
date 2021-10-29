@@ -1,70 +1,70 @@
 import os
 
-def organiza_arquivos(diretorio):
-    os.chdir(diretorio)
+def organize_files(directory):
+    os.chdir(directory)
 
     #Listas de caminhos para as pastas
-    Audios_doc = os.path.join(diretorio, 'Audios')
-    Fotos_doc = os.path.join(diretorio, 'Fotos')
-    Videos_doc = os.path.join(diretorio, 'Videos')
-    Documentos_doc = os.path.join(diretorio, 'Documentos')
-    Outros_doc = os.path.join(diretorio, 'Outros')
-    exe_doc = os.path.join(diretorio, 'Apps')
+    Audios_doc = os.path.join(directory, 'Audios')
+    Photos_doc = os.path.join(directory, 'Fotos')
+    Videos_doc = os.path.join(directory, 'Videos')
+    Documentos_doc = os.path.join(directory, 'Documentos')
+    Others_doc = os.path.join(directory, 'Outros')
+    Apps_doc = os.path.join(directory, 'Apps')
 
     #Extensões aceitas pelo programa
-    audios_ext = ('.mp3', '.wav', '.aiff', '.wma', '.flac', '.alac', '.aac')
-    fotos_ext = ('.jpg', '.jpeg', '.png', '.gif', '.svg', '.jfif')
-    videos_ext = ('.mp4', '.mov', '.wmv', '.flv', '.avi', '.avchd', '.webm', '.mkv')
-    documentos_ext = ('.pdf', '.txt', '.xlsx', '.docx', '.py', '.jar', '.zip')
-    exe_ext = ('.exe', '.apk')
+    Audios_ext = ('.mp3', '.wav', '.aiff', '.wma', '.flac', '.alac', '.aac')
+    Photos_ext = ('.jpg', '.jpeg', '.png', '.gif', '.svg', '.jfif')
+    Videos_ext = ('.mp4', '.mov', '.wmv', '.flv', '.avi', '.avchd', '.webm', '.mkv')
+    Documents_ext = ('.pdf', '.txt', '.xlsx', '.docx', '.py', '.jar', '.zip')
+    Apps_ext = ('.exe', '.apk')
 
     #Confere se as pastas existem
     try:
         if not os.path.isdir(Audios_doc):
             os.mkdir(Audios_doc)
-        if not os.path.isdir(Fotos_doc):
-            os.mkdir(Fotos_doc)
+        if not os.path.isdir(Photos_doc):
+            os.mkdir(Photos_doc)
         if not os.path.isdir(Videos_doc):
             os.mkdir(Videos_doc)
         if not os.path.isdir(Documentos_doc):
             os.mkdir(Documentos_doc)
-        if not os.path.isdir(exe_doc):
-            os.mkdir(exe_doc)
-        if not os.path.isdir(Outros_doc):
-            os.mkdir(Outros_doc)
+        if not os.path.isdir(Apps_doc):
+            os.mkdir(Apps_doc)
+        if not os.path.isdir(Others_doc):
+            os.mkdir(Others_doc)
     except:
         print('Erro ao criar pastas')
 
     #Move os arquivos
     try:
-        lista_arquivos = os.listdir(diretorio)
-        for arquivo in lista_arquivos:
-            caminho_antigo = os.path.join(diretorio, arquivo)
-            caminho_novo = ''
-            if not os.path.isdir(arquivo):
-                ext = arquivo[arquivo.rfind('.'):].lower()
-                if ext in audios_ext:
-                    caminho_novo = Audios_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Audio')
-                elif ext in fotos_ext:
-                    caminho_novo = Fotos_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Fotos')
-                elif ext in videos_ext:
-                    caminho_novo = Videos_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Videos')
-                elif ext in documentos_ext:
-                    caminho_novo = Documentos_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Docs')
-                elif ext in exe_ext:
-                    caminho_novo = exe_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Apps')
+        file_list = os.listdir(directory)
+        for file in file_list:
+            old_way = os.path.join(directory, file)
+            new_way = ''
+            if not os.path.isdir(file):
+                ext = file[file.rfind('.'):].lower()
+                if ext in Audios_ext:
+                    new_way = Audios_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Audio')
+                elif ext in Photos_ext:
+                    new_way = Photos_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Fotos')
+                elif ext in Videos_ext:
+                    new_way = Videos_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Videos')
+                elif ext in Documents_ext:
+                    new_way = Documentos_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Docs')
+                elif ext in Apps_ext:
+                    new_way = Apps_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Apps')
                 else:
-                    caminho_novo = Outros_doc
-                    print(f'O arquivo {arquivo} foi movido para a pasta: Outros')
-            os.replace(caminho_antigo, os.path.join(caminho_novo, arquivo))
+                    new_way = Others_doc
+                    print(f'O arquivo {file} foi movido para a pasta: Outros')
+            os.replace(old_way, os.path.join(new_way, file))
     except:
         print('Erro ao mover arquivos')
 
 if __name__ == '__main__':
-    diretorio = r''#nome do diretório que será usado
-    organiza_arquivos(diretorio)
+    directory = r''#nome do diretório que será usado
+    organize_files(directory)

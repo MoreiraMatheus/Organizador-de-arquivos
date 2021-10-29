@@ -66,5 +66,5 @@ def organiza_arquivos(diretorio):
         print('Erro ao mover arquivos')
 
 if __name__ == '__main__':
-    diretorio = r'C:\Users\famil\OneDrive\Área de Trabalho\teste'#nome do diretório que será usado
+    diretorio = r''#nome do diretório que será usado
     organiza_arquivos(diretorio)

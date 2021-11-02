@@ -15,8 +15,9 @@ Para esse projeto utilizei apenas a linguagem [Python](https://www.python.org)
 ## Executando na sua máquina 🖥️
 antes de começar é preciso ter instalado previamente o [git](https://git-scm.com/downloads) e a linguagem de programação [Python](https://www.python.org/downloads/)
 ```bash
-#clonando o repositório
+#Clonando o repositório
 $ git clone https://github.com/MoreiraMatheus/Organizador-de-arquivos.git
 
-#não se esqueça de adicionar o caminho até o diretório que deseja organizar, basta inserir o mesmo entre r'...'
+#Não se esqueça de adicionar o caminho até o diretório que deseja organizar
+Para isso basta inserir o mesmo entre r'...'
 ```

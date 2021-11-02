@@ -19,5 +19,5 @@ antes de começar é preciso ter instalado previamente o [git](https://git-scm.c
 $ git clone https://github.com/MoreiraMatheus/Organizador-de-arquivos.git
 
 #Não se esqueça de adicionar o caminho até o diretório que deseja organizar
-Para isso basta inserir o mesmo entre r'...'
+#Para isso basta inserir o mesmo entre r'...'
 ```

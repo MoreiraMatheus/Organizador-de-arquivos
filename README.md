@@ -11,3 +11,10 @@ O programa tambem cria as pastas automaticamente
 
 ## Tecnologias 🔨
 Para esse projeto utilizei apenas a linguagem [Python](https://www.python.org)
+
+## Executando na sua máquina 🖥️
+antes de começar é preciso ter instalado previamente o [git](https://git-scm.com/downloads) e a linguagem de programação [Python](https://www.python.org/downloads/)
+```bash
+#clonando o repositório
+$ git clone
+```
